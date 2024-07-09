@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply max-h-[100dvh] bg-[#FFFFFF] text-[#000000];
+  }
+}
+
+@layer utilities {
+  /* TYPOGRAPHY */
+  .ga-maamli-regular {
+    font-family: "Ga Maamli", sans-serif;
+    font-style: normal;
+  }
+
+  .playwrite {
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+}
