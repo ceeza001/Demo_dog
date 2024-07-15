@@ -8,7 +8,7 @@ const dots = [
 
 const SplashScreen = () => {
   return (
-    <section className="text-white flex flex-col items-center justify-end fixed top-0 left-0 h-[100dvh] w-screen bg-[#009CEB]">
+    <section className="text-white flex flex-col items-center justify-end fixed top-0 left-0 h-[100dvh] w-screen bg-black">
       <div className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}
@@ -16,7 +16,7 @@ const SplashScreen = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="/assets/images/hugo.png"
+            src="/assets/images/dog.png"
             className="w-[16rem]"
           />
         </motion.div>
@@ -26,14 +26,14 @@ const SplashScreen = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className="font-bold text-[60px] ga-maamli-regular">
-            $Hugo
+            Dog Demo Mini App
           </motion.h1>
           <motion.p 
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.2 }}
             className="playwrite text-[20px] font-bold">
-            Man's best friend, now on the couch
+             Get rewarded for how long you have used telegram.
           </motion.p>
         </div>
 
