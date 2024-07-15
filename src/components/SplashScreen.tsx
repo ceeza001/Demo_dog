@@ -1,6 +1,10 @@
 import { motion } from "framer-motion"
 
-import ThreeDotsWave from "@/components/shared/three-dots-wave";
+const dots = [
+  {id:1},
+  {id:2},
+  {id:3}
+];
 
 const SplashScreen = () => {
   return (
@@ -16,7 +20,7 @@ const SplashScreen = () => {
             className="w-[16rem]"
           />
         </motion.div>
-        <div className="w-full text-center">
+        <div className="mb-10 w-full text-center">
           <motion.h1 
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -33,8 +37,18 @@ const SplashScreen = () => {
           </motion.p>
         </div>
 
-        <div>
-          <ThreeDotsWave />
+        <div
+          className="flex gap-2 mb-10"
+        >
+          {dots.map((dot, i) => (
+            <motion.div
+              key={dot.id}
+              initial={{ y: "0%" }}
+              animate={{ y: "100%" }}
+              transition={{ duration: 0.8, delay: i * 0.2, ease: "easeInOut", repeat: Infinity, repeatType: 'reverse'}}
+              className="w-[1.2rem] h-[1.2rem] bg-white rounded-full"
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -42,4 +56,3 @@ const SplashScreen = () => {
 }
 
 export default SplashScreen;
-
